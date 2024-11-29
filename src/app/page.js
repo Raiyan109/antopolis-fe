@@ -1,4 +1,5 @@
-import FilterPage from "@/components/FilterPage"
+import HomeComponent from "@/components/HomeComponent"
+
 
 
 
@@ -11,7 +12,7 @@ const HomePage = async () => {
 
   return (
     <div>
-      <FilterPage animals={animals.data} categories={categories.data} />
+      <HomeComponent animals={animals.data} categories={categories.data} />
     </div>
   )
 }
