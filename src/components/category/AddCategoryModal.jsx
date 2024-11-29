@@ -52,9 +52,9 @@ const AddCategoryModal = ({ setOpenCategoryModal }) => {
                     <input type="text"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
-                        className="w-full h-6 py-7 bg-[#F2F2F2] rounded-md placeholder:text-black placeholder:text-xl px-3 text-black text-xl" placeholder="Animal Name" />
+                        className="w-full h-6 py-7 bg-[#F2F2F2] rounded-md placeholder:text-black placeholder:text-xl px-3 text-black text-xl" placeholder="Name" />
 
-                    <button type="submit" className="bg-black text-white w-full h-6 py-7 flex items-center justify-center text-xl">Save</button>
+                    <button type="submit" className="bg-black text-white w-full h-6 py-7 flex items-center justify-center text-xl rounded-md">Save</button>
                 </form>
             </div>
         </div>

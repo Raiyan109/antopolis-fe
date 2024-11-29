@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useRef, useState } from "react";
 import ImageUpload from "./ImageUpload";
-import { createAnimal } from "@/services/AnimalServices";
 
 
 const AddAnimal = ({ setOpenModal }) => {
@@ -11,10 +10,6 @@ const AddAnimal = ({ setOpenModal }) => {
 
     const handleAddImageSubmit = async (e) => {
         e.preventDefault()
-        const animalInfo = {
-            name,
-            image
-        }
         let response = await fetch('http://localhost:5000/api/v1/animal', {
             method: 'POST',
             body: JSON.stringify({
@@ -68,7 +63,7 @@ const AddAnimal = ({ setOpenModal }) => {
                         onChange={(e) => setName(e.target.value)}
                         className="w-full h-6 py-7 bg-[#F2F2F2] rounded-md placeholder:text-black placeholder:text-xl px-3 text-black text-xl" placeholder="Animal Name" />
                     <ImageUpload setImage={setImage} />
-                    <button type="submit" className="bg-black text-white w-full h-6 py-7 flex items-center justify-center text-xl">Create Animal</button>
+                    <button type="submit" className="bg-black text-white w-full h-6 py-7 flex items-center justify-center text-xl rounded-md">Create Animal</button>
                 </form>
             </div>
         </div>

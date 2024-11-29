@@ -1,6 +1,6 @@
 import Image from "next/image"
-import AddAnimalButton from "./AddAnimalButton"
 import AddCategoryButton from "./category/AddCategoryButton"
+import AddAnimalButton from "./animal/AddAnimalButton"
 
 const FilterPage = ({ animals, categories }) => {
 
