@@ -1,5 +1,6 @@
 import Image from "next/image"
 import AddAnimalButton from "./AddAnimalButton"
+import AddCategoryButton from "./category/AddCategoryButton"
 
 const FilterPage = ({ animals, categories }) => {
 
@@ -14,7 +15,7 @@ const FilterPage = ({ animals, categories }) => {
                         ))}
                     </div>
                     <div className="flex flex-wrap max-w-5xl gap-3">
-                        <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-white text-sm lg:text-xl">Add Category</button>
+                        <AddCategoryButton />
                         <AddAnimalButton />
                     </div>
                 </div>

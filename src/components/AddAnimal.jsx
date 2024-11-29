@@ -52,7 +52,7 @@ const AddAnimal = ({ setOpenModal }) => {
         <div className="h-screen fixed inset-0 bg-opacity-10 backdrop-blur-sm bg-black flex justify-center items-center z-10">
             <div
                 ref={modalRef}
-                className="bg-white h-[450px] w-[500px] md:w-[700px] lg:w-[500px] rounded-3xl -mt-10 flex flex-col gap-5 overflow-auto p-9 shadow-xl"
+                className="bg-white h-[340px] w-[500px] md:w-[700px] lg:w-[430px] rounded-3xl -mt-10 flex flex-col gap-5 overflow-auto p-9 shadow-xl"
             >
                 {/* <button
                     className="bg-[#a2e1f5] text-[#140152] place-self-end p-2 mr-2 rounded-full"
