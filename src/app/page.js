@@ -1,10 +1,12 @@
 import FilterPage from "@/components/FilterPage"
-import { getAnimals } from "@/services/AnimalServices"
+
 
 
 const HomePage = async () => {
-  const animals = await getAnimals()
-  console.log(animals);
+  let data = await fetch('http://localhost:5000/api/v1/animal')
+  let animals = await data.json()
+  console.log(animals, 'from page.js');
+
 
   return (
     <div>

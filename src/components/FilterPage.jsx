@@ -1,8 +1,9 @@
 import Image from "next/image"
 import AddAnimalButton from "./AddAnimalButton"
 
-
 const FilterPage = ({ animals }) => {
+
+
     return (
         <div className="flex py-32 justify-center mx-auto container h-screen ">
             <div className="space-y-16">
@@ -39,6 +40,7 @@ const FilterPage = ({ animals }) => {
                     </div>
                 </div>
             </div>
+
         </div>
     )
 }
