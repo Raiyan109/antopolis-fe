@@ -1,10 +1,16 @@
-import FilterPage from "@/components/FilterPage";
+import FilterPage from "@/components/FilterPage"
+import { getAnimals } from "@/services/AnimalServices"
 
 
-export default function Home() {
+const HomePage = async () => {
+  const animals = await getAnimals()
+  console.log(animals);
+
   return (
     <div>
-      <FilterPage />
+      <FilterPage animals={animals.data} />
     </div>
-  );
+  )
 }
+
+export default HomePage
