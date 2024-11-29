@@ -3,14 +3,15 @@ import FilterPage from "@/components/FilterPage"
 
 
 const HomePage = async () => {
-  let data = await fetch('http://localhost:5000/api/v1/animal')
-  let animals = await data.json()
-  console.log(animals, 'from page.js');
+  const data = await fetch('http://localhost:5000/api/v1/animal')
+  const animals = await data.json()
 
+  const categoryData = await fetch('http://localhost:5000/api/v1/category')
+  const categories = await categoryData.json()
 
   return (
     <div>
-      <FilterPage animals={animals.data} />
+      <FilterPage animals={animals.data} categories={categories.data} />
     </div>
   )
 }

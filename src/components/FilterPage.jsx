@@ -1,7 +1,7 @@
 import Image from "next/image"
 import AddAnimalButton from "./AddAnimalButton"
 
-const FilterPage = ({ animals }) => {
+const FilterPage = ({ animals, categories }) => {
 
 
     return (
@@ -9,10 +9,9 @@ const FilterPage = ({ animals }) => {
             <div className="space-y-16">
                 <div className="flex items-center justify-between px-5 lg:px-0">
                     <div className="flex flex-wrap max-w-5xl gap-3">
-                        <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-[#EF0D0D] text-[#EF0D0D] text-sm lg:text-xl">Land Animal</button>
-                        <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-[#EF0D0D] text-[#EF0D0D] text-sm lg:text-xl">Bird</button>
-                        <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-[#EF0D0D] text-[#EF0D0D] text-sm lg:text-xl">Fish</button>
-                        <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-[#EF0D0D] text-[#EF0D0D] text-sm lg:text-xl">Insect</button>
+                        {categories.map((category) => (
+                            <button key={category._id} className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-[#EF0D0D] text-[#EF0D0D] text-sm lg:text-xl">{category.name}</button>
+                        ))}
                     </div>
                     <div className="flex flex-wrap max-w-5xl gap-3">
                         <button className="px-2 py-1 lg:px-5 lg:py-3 rounded-full border border-white text-sm lg:text-xl">Add Category</button>
