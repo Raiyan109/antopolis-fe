@@ -4,10 +4,10 @@ import HomeComponent from "@/components/HomeComponent"
 
 
 const HomePage = async () => {
-  const data = await fetch('http://localhost:5000/api/v1/animal')
+  const data = await fetch('https://antopolis-ts.vercel.app/api/v1/animal')
   const animals = await data.json()
 
-  const categoryData = await fetch('http://localhost:5000/api/v1/category')
+  const categoryData = await fetch('https://antopolis-ts.vercel.app/api/v1/category')
   const categories = await categoryData.json()
 
   return (

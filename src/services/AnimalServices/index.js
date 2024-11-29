@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const getAnimals = async () => {
     try {
-        await fetch(`http://localhost:5000/api/v1/animal`, {
+        await fetch(`https://antopolis-ts.vercel.app/api/v1/animal`, {
             method: 'GET'
         })
             .then((response) => response.json())
@@ -21,7 +21,7 @@ export const getAnimals = async () => {
 
 export const createAnimal = async (animal) => {
     try {
-        const { data } = await fetch("http://localhost:5000/api/v1/animal", {
+        const { data } = await fetch("https://antopolis-ts.vercel.app/api/v1/animal", {
             method: 'POST',
             body: JSON.stringify(animal)
         });

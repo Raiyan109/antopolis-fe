@@ -9,7 +9,7 @@ const AddCategoryModal = ({ setOpenCategoryModal }) => {
     const handleAddCategorySubmit = async (e) => {
         e.preventDefault()
 
-        let response = await fetch('http://localhost:5000/api/v1/category', {
+        let response = await fetch('https://antopolis-ts.vercel.app/api/v1/category', {
             method: 'POST',
             body: JSON.stringify({
                 name,
